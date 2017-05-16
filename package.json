@@ -1,0 +1,23 @@
+{
+  "name": "lm-th-wx-sr-login-status",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limingtech-front-end/lm-th-wx-sr-login-status.git"
+  },
+  "author": "littlstonee <littlstonee@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/limingtech-front-end/lm-th-wx-sr-login-status/issues"
+  },
+  "homepage": "https://github.com/limingtech-front-end/lm-th-wx-sr-login-status#readme",
+  "dependencies": {
+    "lm-se-client-info": "git+https://github.com/limingtech-front-end/lm-se-client-info.git",
+    "lm-ut-calc-uri-params": "git+https://github.com/limingtech-front-end/lm-ut-calc-uri-params.git"
+  }
+}
