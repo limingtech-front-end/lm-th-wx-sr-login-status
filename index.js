@@ -6,7 +6,7 @@ var clientInfo =require('lm-se-client-info')
 var requestingQueen=[]
 
 module.exports=function() {
-    return new Promise((resolve, reject) => {
+    return new Promise(function(resolve, reject){
         let params=calcUriParams.getUriQuery(),
             localSavedLoginCheck=localStorage.getItem('logincheck')
     	if(clientInfo.render.isWechatWebView){
@@ -35,7 +35,7 @@ module.exports=function() {
                         })
                         requestingQueen=[]
                         // resolve(userInfo)
-                    },(response)=>{
+                    },function(response){
                         requestingQueen.forEach(function(queen){
                             queen.reject('get userinfo in wechat occured error!!!')
                         })
