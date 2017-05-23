@@ -15,7 +15,7 @@ module.exports=function() {
             }else{
               if(!requestingQueen.length){
                   requestingQueen.push({resolve:resolve,reject:reject})
-                  Vue.http.get('/api/code/'+params.code+'/'+params.state+'/wxcode.jhtml').then((response)=>{
+                  Vue.http.get('/api/code/'+params.code+'/'+params.state+'/wxcode.jhtml').then(function(response){
                         var userInfo=response.data
                         userInfo.userId=userInfo.userId || ''
                         userInfo.wechatOpen=params.state
