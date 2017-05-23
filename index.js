@@ -7,7 +7,7 @@ var requestingQueen=[]
 
 module.exports=function() {
     return new Promise(function(resolve, reject){
-        let params=calcUriParams.getUriQuery(),
+        var params=calcUriParams.getUriQuery(),
             localSavedLoginCheck=localStorage.getItem('logincheck')
     	if(clientInfo.render.isWechatWebView){
             if(localSavedLoginCheck && JSON.parse(localSavedLoginCheck).wechatOpenId && JSON.parse(localSavedLoginCheck).code==params.code && JSON.parse(localSavedLoginCheck).wechatOpen==params.state){
