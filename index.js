@@ -9,7 +9,7 @@ module.exports=function() {
     return new Promise(function(resolve, reject){
         var params=calcUriParams.getUriQuery(),
             localSavedLoginCheck=localStorage.getItem('logincheck')
-    	if(clientInfo.render.isWechatWebView){
+    	if(clientInfo.render.isWechatWebView && !!params.state){
             if(localSavedLoginCheck && JSON.parse(localSavedLoginCheck).wechatOpenId && JSON.parse(localSavedLoginCheck).code==params.code && JSON.parse(localSavedLoginCheck).wechatOpen==params.state){
                 resolve(JSON.parse(localStorage.getItem('user')))
             }else{
